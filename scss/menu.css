@@ -111,14 +111,6 @@
   .title-box__title {
     font-size: var(--p3);
   }
-  .header-links__list .list__a {
-    display: block;
-    border: none;
-  }
-  .header__header-links li {
-    border: none;
-    text-decoration: underline var(--color4);
-  }
   .main__description {
     width: 60%;
   }

@@ -106,15 +106,8 @@ li {
 
 /* responsive styles for smaller screen sizes */
 @media (max-width: 960px) {
-  .nav-bar__list .list__a {
-    font-size: var(--p1);
-  }
+  
 }
 @media (max-width: 480px) {
-  .banner-content__icon {
-    width: 2em;
-  }
-  .banner-content__a h3 {
-    font-size: var(--p2);
-  }
+  
 }
