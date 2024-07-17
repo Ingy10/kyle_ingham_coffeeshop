@@ -1,5 +1,5 @@
 /* Header Styles */
-.header__menu {
+.header-menu {
   background-image: url(../Assets/coffee-circle.jpg);
   background-size: cover;
   background-position: center;
@@ -8,13 +8,13 @@
   display: flex;
 }
 .header-links__list,
-.header-links__list li {
+.header-links__list-item {
   width: 100%;
   background-color: var(--color1);
   color: var(--color3);
   text-align: center;
 }
-.menu__title-box {
+.header-menu__title-box {
   height: 12rem;
   width: 18rem;
   background-color: var(--color1);
@@ -37,10 +37,10 @@
   color: var(--color3);
   transform: translateX(-0.1em) translateY(-0.1em);
 }
-.header__header-links .header-links__list {
+.header-links__list {
   padding: 1em;
 }
-.header__header-links li {
+.header-links__list-item {
   display: inline;
   padding: 0 0.8em;
   border-left: 0.2em solid var(--color4);
@@ -48,21 +48,21 @@
 }
 
 /* Main Section Styles */
-.main__section h2,
-.main__section h3,
+.main__section .first-title,
+.main__section .second-title,
 .main__section p {
   text-align: center;
   width: 80%;
   margin: auto;
 }
-.main__section h2 {
+.main__section .first-title {
   padding-top: 0.2em;
   padding-bottom: 0.3em;
 }
-.main__section h3 {
+.main__section .second-title {
   padding-bottom: 0.2em;
 }
-.main__section p:not(.main__description) {
+.main__price {
   padding-top: 0.2em;
   padding-bottom: 1em;
 }
@@ -104,7 +104,7 @@
 @media (max-width: 960px) {
 }
 @media (max-width: 480px) {
-  .menu__title-box {
+  .header-menu__title-box {
     height: 8rem;
     width: 12rem;
   }

@@ -2,7 +2,7 @@
 .header {
   margin: 0;
 }
-.header__nav-bar,
+.nav-bar,
 .header__section {
   background-color: var(--color5);
 }

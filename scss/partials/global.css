@@ -31,7 +31,7 @@ body {
 }
 
 /* header section styles */
-.header__nav-bar {
+.nav-bar {
   background-color: var(--color5);
   padding-top: 1rem;
   padding-left: 1em;
