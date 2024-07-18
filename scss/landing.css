@@ -264,7 +264,6 @@ li {
 }
 
 .section2__border {
-  inset: 0;
   border: 5px solid var(--color4);
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
@@ -272,7 +271,6 @@ li {
   left: -0.9em;
   bottom: 0.9em;
   right: 0.9em;
-  /* transform: translateX(-0.9em) translateY(-0.9em); */
 }
 
 .discount-section__bottom-section {
@@ -325,8 +323,6 @@ li {
   display: inline-block;
   margin: 4em 2em;
   text-align: left;
-  /* padding-right: 6em; */
-  /* border: 1px solid green; */
 }
 
 .footer .second-title {
@@ -351,11 +347,13 @@ button:hover {
 }
 
 .button__border {
-  inset: 0;
   border: 2px solid var(--color1);
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
-  transform: translateX(-0.2em) translateY(-0.2em);
+  top: -0.2em;
+  left: -0.2em;
+  bottom: 0.2em;
+  right: 0.2em;
 }
 
 .description__button,
@@ -372,6 +370,25 @@ button:hover {
   .header__section {
     padding: 2em;
   }
+  .main__discount-section {
+    height: auto;
+  }
+  .discount-section__top-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-top: 4em;
+  }
+  .top-section__section1 {
+    margin-bottom: 5em;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section1__images {
+    width: 100%;
+  }
   .footer__section,
   .footer p {
     margin: 1em;
@@ -380,8 +397,8 @@ button:hover {
   }
 }
 @media (max-width: 480px) {
-  /* .our-products__product-cards .product-card {
+  .our-products__product-cards .product-card {
     width: 17em;
     padding: 1em;
-  } */
+  }
 }/*# sourceMappingURL=landing.css.map */

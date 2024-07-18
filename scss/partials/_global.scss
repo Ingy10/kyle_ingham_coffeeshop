@@ -15,7 +15,17 @@
   --min-width: 320px;
   --max-width: 1440px;
 }
-
+// mixins
+@mixin offset-border($offset, $thickness, $color) {
+  // inset: 0;
+  border: $thickness solid $color;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: -$offset;
+  left: -$offset;
+  bottom: $offset;
+  right: $offset;
+}
 /* Enitre document styles */
 * {
   margin: 0;

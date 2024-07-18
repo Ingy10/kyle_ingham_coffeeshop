@@ -27,13 +27,7 @@
   justify-content: center;
 }
 .title-box__border {
-  /* height: 12rem;
-  width: 18rem; */
-  inset: 0;
-  border: 5px solid var(--color4);
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  transform: translateX(-0.3em) translateY(-0.3em);
+  @include offset-border(0.3em, 5px, var(--color4));
 }
 .title-box__title {
   color: var(--color3);
