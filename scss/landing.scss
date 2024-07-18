@@ -205,6 +205,9 @@ button:hover {
   .header__section {
     padding: 2em;
   }
+  .section__img {
+    height: 25em;
+  }
   .main__discount-section {
     height: auto;
   }
@@ -212,14 +215,22 @@ button:hover {
     display: flex;
     flex-direction: column;
     height: auto;
-    padding-top: 4em;
+    padding-top: 2em;
   }
   .top-section__section1 {
-    margin-bottom: 5em;
+    margin-bottom: 6em;
     width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    .section1__title {
+      text-align: center;
+      margin-bottom: 0.3em;
+      line-height: 1;
+    }
+    .section1__description {
+      text-align: center;
+    }
   }
   .section1__images {
     width: 100%;
@@ -230,10 +241,35 @@ button:hover {
     padding: 0;
     text-align: center;
   }
+  .footer {
+    display: flex;
+    flex-flow: wrap;
+  }
 }
 @media (max-width: 480px) {
   .our-products__product-cards .product-card {
     width: 17em;
     padding: 1em;
+  }
+  .top-section__section1 {
+    margin-bottom: 4em;
+  }
+  .top-section__section2 {
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin-bottom: 1em;
+    .section2__img {
+      width: 70%;
+      height: auto;
+      transform: translateX(-5px);
+    }
+  }
+  .footer {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  .footer__section {
+    margin: 0;
   }
 }

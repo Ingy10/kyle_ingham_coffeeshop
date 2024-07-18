@@ -10,7 +10,7 @@ body {
   margin: auto;
   width: 100%;
   max-width: 1440px;
-  min-width: 320px;
+  min-width: 300px;
 }
 
 /* header section styles */
@@ -20,6 +20,7 @@ body {
   padding-left: 1em;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .nav-bar__banner-content {
@@ -32,7 +33,6 @@ body {
   display: flex;
   align-items: center;
   padding-left: 1em;
-  min-width: 320px;
 }
 
 .list__item {
@@ -98,6 +98,32 @@ li {
 }
 
 /* responsive styles for smaller screen sizes */
+@media (max-width: 960px) {
+  .nav-bar__list {
+    padding-left: 0;
+    overflow: hidden;
+  }
+  .list__item {
+    padding: 0;
+    text-wrap: nowrap;
+  }
+}
+@media (max-width: 480px) {
+  .nav-bar__banner-content .icon {
+    width: 2em;
+  }
+  .nav-bar__banner-content .second-title {
+    font-size: 1.3rem;
+  }
+  .list_item {
+    margin: 0;
+    padding: 0;
+  }
+  .item__link {
+    font-size: 1em;
+    margin: 0;
+  }
+}
 /* Header Styles */
 .header-menu {
   background-image: url(../Assets/coffee-circle.jpg);
@@ -179,7 +205,7 @@ li {
 .main .main__description {
   width: 30%;
   margin: auto;
-  min-width: 320px;
+  min-width: 300px;
 }
 
 .main__section {

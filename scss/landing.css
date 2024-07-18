@@ -10,7 +10,7 @@ body {
   margin: auto;
   width: 100%;
   max-width: 1440px;
-  min-width: 320px;
+  min-width: 300px;
 }
 
 /* header section styles */
@@ -20,6 +20,7 @@ body {
   padding-left: 1em;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .nav-bar__banner-content {
@@ -32,7 +33,6 @@ body {
   display: flex;
   align-items: center;
   padding-left: 1em;
-  min-width: 320px;
 }
 
 .list__item {
@@ -98,6 +98,32 @@ li {
 }
 
 /* responsive styles for smaller screen sizes */
+@media (max-width: 960px) {
+  .nav-bar__list {
+    padding-left: 0;
+    overflow: hidden;
+  }
+  .list__item {
+    padding: 0;
+    text-wrap: nowrap;
+  }
+}
+@media (max-width: 480px) {
+  .nav-bar__banner-content .icon {
+    width: 2em;
+  }
+  .nav-bar__banner-content .second-title {
+    font-size: 1.3rem;
+  }
+  .list_item {
+    margin: 0;
+    padding: 0;
+  }
+  .item__link {
+    font-size: 1em;
+    margin: 0;
+  }
+}
 /* header styles */
 .header {
   margin: 0;
@@ -268,7 +294,7 @@ li {
   padding: 0.8em 1.2em;
   text-align: center;
   margin: auto;
-  min-width: 320px;
+  min-width: 300px;
   width: 100%;
 }
 
@@ -350,6 +376,9 @@ button:hover {
   .header__section {
     padding: 2em;
   }
+  .section__img {
+    height: 25em;
+  }
   .main__discount-section {
     height: auto;
   }
@@ -357,14 +386,22 @@ button:hover {
     display: flex;
     flex-direction: column;
     height: auto;
-    padding-top: 4em;
+    padding-top: 2em;
   }
   .top-section__section1 {
-    margin-bottom: 5em;
+    margin-bottom: 6em;
     width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .top-section__section1 .section1__title {
+    text-align: center;
+    margin-bottom: 0.3em;
+    line-height: 1;
+  }
+  .top-section__section1 .section1__description {
+    text-align: center;
   }
   .section1__images {
     width: 100%;
@@ -375,10 +412,35 @@ button:hover {
     padding: 0;
     text-align: center;
   }
+  .footer {
+    display: flex;
+    flex-flow: wrap;
+  }
 }
 @media (max-width: 480px) {
   .our-products__product-cards .product-card {
     width: 17em;
     padding: 1em;
+  }
+  .top-section__section1 {
+    margin-bottom: 4em;
+  }
+  .top-section__section2 {
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin-bottom: 1em;
+  }
+  .top-section__section2 .section2__img {
+    width: 70%;
+    height: auto;
+    transform: translateX(-5px);
+  }
+  .footer {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  .footer__section {
+    margin: 0;
   }
 }/*# sourceMappingURL=landing.css.map */
