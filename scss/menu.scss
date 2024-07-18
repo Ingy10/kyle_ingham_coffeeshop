@@ -1,122 +1,5 @@
-/* Consistent colors, text sizes and max/min widths for each page */
-:root {
-  --color1: #393939;
-  --color2: #f7f7f7;
-  --color3: #fff;
-  --color4: #5bacc3;
-  --color5: #fff0ed;
-  --color6: #909090;
-  --h1-h2: 3.7rem;
-  --h3: 2.2rem;
-  --h3card: 2rem;
-  --p1: 1rem;
-  --p2: 1.3rem;
-  --p3: 2.8rem;
-  --min-width: 320px;
-  --max-width: 1440px;
-}
+@use "./partials/global" as *;
 
-/* Enitre document styles */
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Open Sans";
-  font-weight: 400;
-  margin: auto;
-  width: 100%;
-  max-width: var(--max-width);
-  min-width: var(--min-width);
-}
-
-/* header section styles */
-.nav-bar {
-  background-color: var(--color5);
-  padding-top: 1rem;
-  padding-left: 1em;
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-bar__banner-content {
-  display: flex;
-  align-items: center;
-  padding-bottom: 1em;
-}
-
-.nav-bar__list {
-  display: flex;
-  align-items: center;
-  padding-left: 1em;
-  min-width: var(--min-width);
-}
-
-.list__item {
-  padding: 1.3em 1em;
-  position: relative;
-  /* border: 1px solid red; */
-}
-
-.item__link {
-  padding: 1em 1em;
-  text-align: center;
-  font-size: var(--p2);
-  color: var(--color1);
-  /* border: 1px solid red; */
-}
-
-.item__link1:hover,
-.item__link2:hover {
-  color: var(--color4);
-}
-
-.item__link3 {
-  color: var(--color4);
-}
-
-.item__link3:hover {
-  color: var(--color1);
-}
-
-/* Icon styles */
-.icon {
-  width: 3rem;
-}
-
-/* Font styles for entire document */
-.first-title {
-  font-weight: 300;
-  color: var(--color1);
-  font-size: var(--h1-h2);
-}
-
-.second-title {
-  font-weight: 300;
-  color: var(--color1);
-  font-size: var(--h3);
-}
-
-.main__price {
-  color: var(--color4);
-}
-
-.link {
-  text-decoration: none;
-}
-
-.header__text,
-.footer__text {
-  font-size: var(--p1);
-}
-
-/* list styles */
-li {
-  list-style-type: none;
-}
-
-/* responsive styles for smaller screen sizes */
 /* Header Styles */
 .header-menu {
   background-image: url(../Assets/coffee-circle.jpg);
@@ -126,7 +9,6 @@ li {
   height: 36rem;
   display: flex;
 }
-
 .header-links__list,
 .header-links__list-item {
   width: 100%;
@@ -134,7 +16,6 @@ li {
   color: var(--color3);
   text-align: center;
 }
-
 .header-menu__title-box {
   height: 12rem;
   width: 18rem;
@@ -145,7 +26,6 @@ li {
   align-items: center;
   justify-content: center;
 }
-
 .title-box__border {
   /* height: 12rem;
   width: 18rem; */
@@ -155,16 +35,13 @@ li {
   position: absolute;
   transform: translateX(-0.3em) translateY(-0.3em);
 }
-
 .title-box__title {
   color: var(--color3);
   transform: translateX(-0.1em) translateY(-0.1em);
 }
-
 .header-links__list {
   padding: 1em;
 }
-
 .header-links__list-item {
   display: inline;
   padding: 0 0.8em;
@@ -180,44 +57,35 @@ li {
   width: 80%;
   margin: auto;
 }
-
 .main__section .first-title {
   padding-top: 0.2em;
   padding-bottom: 0.3em;
 }
-
 .main__section .second-title {
   padding-bottom: 0.2em;
 }
-
 .main__price {
   padding-top: 0.2em;
   padding-bottom: 1em;
 }
-
 .main .main__description {
   width: 30%;
   margin: auto;
   min-width: var(--min-width);
 }
-
 .main__section {
   padding-bottom: 1em;
 }
-
 .main__hot-drinks,
 .main__pastries {
   background-color: var(--color5);
 }
-
 .main__cold-drinks {
   background-color: var(--color2);
 }
-
 .main__section:last-child {
   padding-bottom: 3em;
 }
-
 /* Footer Styles */
 .footer,
 .footer__icon,
@@ -225,18 +93,18 @@ li {
   background-color: var(--color5);
   text-align: center;
 }
-
 .footer__line {
   width: 20%;
   margin: auto;
   margin-bottom: 3em;
 }
-
 .footer__icon {
   margin-bottom: 2em;
 }
 
 /* responsive styles for smaller screen sizes */
+@media (max-width: 960px) {
+}
 @media (max-width: 480px) {
   .header-menu__title-box {
     height: 8rem;
@@ -248,4 +116,4 @@ li {
   .main__description {
     width: 60%;
   }
-}/*# sourceMappingURL=menu.css.map */
+}

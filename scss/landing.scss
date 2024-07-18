@@ -1,132 +1,13 @@
-/* Consistent colors, text sizes and max/min widths for each page */
-:root {
-  --color1: #393939;
-  --color2: #f7f7f7;
-  --color3: #fff;
-  --color4: #5bacc3;
-  --color5: #fff0ed;
-  --color6: #909090;
-  --h1-h2: 3.7rem;
-  --h3: 2.2rem;
-  --h3card: 2rem;
-  --p1: 1rem;
-  --p2: 1.3rem;
-  --p3: 2.8rem;
-  --min-width: 320px;
-  --max-width: 1440px;
-}
+@use "./partials/global" as *;
 
-/* Enitre document styles */
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Open Sans";
-  font-weight: 400;
-  margin: auto;
-  width: 100%;
-  max-width: var(--max-width);
-  min-width: var(--min-width);
-}
-
-/* header section styles */
-.nav-bar {
-  background-color: var(--color5);
-  padding-top: 1rem;
-  padding-left: 1em;
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-bar__banner-content {
-  display: flex;
-  align-items: center;
-  padding-bottom: 1em;
-}
-
-.nav-bar__list {
-  display: flex;
-  align-items: center;
-  padding-left: 1em;
-  min-width: var(--min-width);
-}
-
-.list__item {
-  padding: 1.3em 1em;
-  position: relative;
-  /* border: 1px solid red; */
-}
-
-.item__link {
-  padding: 1em 1em;
-  text-align: center;
-  font-size: var(--p2);
-  color: var(--color1);
-  /* border: 1px solid red; */
-}
-
-.item__link1:hover,
-.item__link2:hover {
-  color: var(--color4);
-}
-
-.item__link3 {
-  color: var(--color4);
-}
-
-.item__link3:hover {
-  color: var(--color1);
-}
-
-/* Icon styles */
-.icon {
-  width: 3rem;
-}
-
-/* Font styles for entire document */
-.first-title {
-  font-weight: 300;
-  color: var(--color1);
-  font-size: var(--h1-h2);
-}
-
-.second-title {
-  font-weight: 300;
-  color: var(--color1);
-  font-size: var(--h3);
-}
-
-.main__price {
-  color: var(--color4);
-}
-
-.link {
-  text-decoration: none;
-}
-
-.header__text,
-.footer__text {
-  font-size: var(--p1);
-}
-
-/* list styles */
-li {
-  list-style-type: none;
-}
-
-/* responsive styles for smaller screen sizes */
 /* header styles */
 .header {
   margin: 0;
 }
-
 .nav-bar,
 .header__section {
   background-color: var(--color5);
 }
-
 .header__section {
   display: flex;
   align-items: center;
@@ -135,31 +16,25 @@ li {
   padding: 2em 12em 2em 8em;
   overflow: hidden;
 }
-
 .description__text {
   margin-top: 0.7em;
   margin-bottom: -0.3em;
 }
-
 .section__description {
   max-width: 22em;
 }
-
 .section__img {
   height: 32rem;
 }
-
 /* main section styles */
 .main__our-products {
   text-align: center;
   background-color: var(--color2);
   padding-bottom: 3em;
 }
-
 .our-products__title {
   padding: 0.7em 0;
 }
-
 .our-products__product-cards .product-card {
   display: inline-block;
   background-color: var(--color3);
@@ -168,16 +43,13 @@ li {
   border-radius: 10px;
   width: 20em;
 }
-
 .product-card__container-top {
   padding: 1em 2em 1em;
 }
-
 .container-top__img {
   height: 15rem;
   margin-bottom: 1em;
 }
-
 .product-card__container-bottom {
   padding: 1em 1em;
   display: flex;
@@ -186,35 +58,29 @@ li {
   background-color: var(--color5);
   height: 9em;
 }
-
 .container-bottom__description {
   text-align: left;
 }
-
 /* .description__title {
   font-size: var(--h3card);
 } */
 .description__sub-title {
   color: var(--color6);
 }
-
 .main__our-products .main__price {
   font-size: 1.8em;
   font-weight: 700;
 }
-
 .our-products__button {
   padding-left: 2em;
   padding-right: 2em;
 }
-
 .main__discount-section {
   height: 64rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .discount-section__top-section {
   height: 32rem;
   padding-top: 7em;
@@ -224,26 +90,21 @@ li {
   align-items: center;
   /* border: 1px solid orange; */
 }
-
 .top-section__section1 {
   width: 37%;
 }
-
 .section1__title {
   margin-bottom: 0.4em;
 }
-
 .section1__images {
   display: flex;
   justify-content: space-between;
   padding-top: 1.5em;
   padding-bottom: 1.8em;
 }
-
 .images__icon {
   width: 2.4em;
 }
-
 .top-section__section2 {
   width: 24em;
   padding: 4em 1.2em;
@@ -254,7 +115,6 @@ li {
   align-items: center;
   position: relative;
 }
-
 .section2__img {
   /* transform: translateX(-0.9em) translateY(-0.9em); */
   top: -0.9em;
@@ -262,7 +122,6 @@ li {
   bottom: 0.9em;
   right: 0.9em;
 }
-
 .section2__border {
   inset: 0;
   border: 5px solid var(--color4);
@@ -274,14 +133,12 @@ li {
   right: 0.9em;
   /* transform: translateX(-0.9em) translateY(-0.9em); */
 }
-
 .discount-section__bottom-section {
   height: 32rem;
   width: 80%;
   display: flex;
   /* border: 1px solid red; */
 }
-
 .bottom-section__description {
   background-color: var(--color1);
   color: var(--color3);
@@ -293,7 +150,6 @@ li {
   min-width: var(--min-width);
   width: 100%;
 }
-
 /* footer styles */
 .footer {
   background-color: var(--color5);
@@ -303,24 +159,20 @@ li {
   position: relative;
   overflow: hidden;
 }
-
 .footer__background-img1,
 .footer__background-img2 {
   position: absolute;
   width: 6em;
   opacity: 0.2;
 }
-
 .footer__background-img1 {
   top: 1em;
   left: -2em;
 }
-
 .footer__background-img2 {
   bottom: 1em;
   right: -2em;
 }
-
 .footer__section {
   display: inline-block;
   margin: 4em 2em;
@@ -328,11 +180,9 @@ li {
   /* padding-right: 6em; */
   /* border: 1px solid green; */
 }
-
 .footer .second-title {
   margin-bottom: 0.5em;
 }
-
 /* button and icon styles */
 button {
   border: none;
@@ -343,13 +193,11 @@ button {
   width: 9em;
   position: relative;
 }
-
 button:hover {
   cursor: pointer;
   background-color: var(--color3);
   color: var(--color4);
 }
-
 .button__border {
   inset: 0;
   border: 2px solid var(--color1);
@@ -357,16 +205,15 @@ button:hover {
   position: absolute;
   transform: translateX(-0.2em) translateY(-0.2em);
 }
-
 .description__button,
 .our-products__button {
   margin-top: 2em;
 }
-
 .social__icon:hover {
-  box-shadow: 1px 1px 6px var(--color4), 2px 2px 7px var(--color4), -2px -2px 8px var(--color4), inset 1px 1px 5px var(--color4), inset -1px -1px 6px var(--color4);
+  box-shadow: 1px 1px 6px var(--color4), 2px 2px 7px var(--color4),
+    -2px -2px 8px var(--color4), inset 1px 1px 5px var(--color4),
+    inset -1px -1px 6px var(--color4);
 }
-
 /* responsive styles for smaller screen sizes */
 @media (max-width: 960px) {
   .header__section {
@@ -384,4 +231,4 @@ button:hover {
     width: 17em;
     padding: 1em;
   } */
-}/*# sourceMappingURL=landing.css.map */
+}
