@@ -1,4 +1,6 @@
-@use "./partials/global" as *;
+@use "./partials/global";
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
 
 /* header styles */
 .header {
@@ -6,7 +8,7 @@
 }
 .nav-bar,
 .header__section {
-  background-color: var(--color5);
+  background-color: $color5;
 }
 .header__section {
   display: flex;
@@ -29,7 +31,7 @@
 /* main section styles */
 .main__our-products {
   text-align: center;
-  background-color: var(--color2);
+  background-color: $color2;
   padding-bottom: 3em;
 }
 .our-products__title {
@@ -37,7 +39,7 @@
 }
 .our-products__product-cards .product-card {
   display: inline-block;
-  background-color: var(--color3);
+  background-color: $color3;
   margin: 1em 3em;
   box-shadow: 0 5px 9px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -55,17 +57,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color5);
+  background-color: $color5;
   height: 9em;
 }
 .container-bottom__description {
   text-align: left;
 }
 /* .description__title {
-  font-size: var(--h3card);
+  font-size: $h3card;
 } */
 .description__sub-title {
-  color: var(--color6);
+  color: $color6;
 }
 .main__our-products .main__price {
   font-size: 1.8em;
@@ -116,14 +118,13 @@
   position: relative;
 }
 .section2__img {
-  /* transform: translateX(-0.9em) translateY(-0.9em); */
   top: -0.9em;
   left: -0.9em;
   bottom: 0.9em;
   right: 0.9em;
 }
 .section2__border {
-  @include offset-border(0.9em, 5px, var(--color4));
+  @include offset-border(0.9em, 5px, $color4);
 }
 .discount-section__bottom-section {
   height: 32rem;
@@ -132,19 +133,19 @@
   /* border: 1px solid red; */
 }
 .bottom-section__description {
-  background-color: var(--color1);
-  color: var(--color3);
-  font-size: var(--p3);
+  background-color: $color1;
+  color: $color3;
+  font-size: $p3;
   font-weight: 200;
   padding: 0.8em 1.2em;
   text-align: center;
   margin: auto;
-  min-width: var(--min-width);
+  min-width: $min-width;
   width: 100%;
 }
 /* footer styles */
 .footer {
-  background-color: var(--color5);
+  background-color: $color5;
   text-align: center;
   display: flex;
   justify-content: space-around;
@@ -176,29 +177,28 @@
 /* button and icon styles */
 button {
   border: none;
-  background-color: var(--color4);
-  color: var(--color2);
-  font-size: var(--p2);
+  background-color: $color4;
+  color: $color2;
+  font-size: $p2;
   padding: 0.6em 1em 1em 0.4em;
   width: 9em;
   position: relative;
 }
 button:hover {
   cursor: pointer;
-  background-color: var(--color3);
-  color: var(--color4);
+  background-color: $color3;
+  color: $color4;
 }
 .button__border {
-  @include offset-border(0.2em, 2px, var(--color1));
+  @include offset-border(0.2em, 2px, $color1);
 }
 .description__button,
 .our-products__button {
   margin-top: 2em;
 }
 .social__icon:hover {
-  box-shadow: 1px 1px 6px var(--color4), 2px 2px 7px var(--color4),
-    -2px -2px 8px var(--color4), inset 1px 1px 5px var(--color4),
-    inset -1px -1px 6px var(--color4);
+  box-shadow: 1px 1px 6px $color4, 2px 2px 7px $color4, -2px -2px 8px $color4,
+    inset 1px 1px 5px $color4, inset -1px -1px 6px $color4;
 }
 /* responsive styles for smaller screen sizes */
 @media (max-width: 960px) {

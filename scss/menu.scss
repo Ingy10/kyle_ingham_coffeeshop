@@ -1,4 +1,6 @@
-@use "./partials/global" as *;
+@use "./partials/global";
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
 
 /* Header Styles */
 .header-menu {
@@ -12,14 +14,14 @@
 .header-links__list,
 .header-links__list-item {
   width: 100%;
-  background-color: var(--color1);
-  color: var(--color3);
+  background-color: $color1;
+  color: $color3;
   text-align: center;
 }
 .header-menu__title-box {
   height: 12rem;
   width: 18rem;
-  background-color: var(--color1);
+  background-color: $color1;
   margin: auto;
   position: relative;
   display: flex;
@@ -27,10 +29,10 @@
   justify-content: center;
 }
 .title-box__border {
-  @include offset-border(0.3em, 5px, var(--color4));
+  @include offset-border(0.3em, 5px, $color4);
 }
 .title-box__title {
-  color: var(--color3);
+  color: $color3;
   transform: translateX(-0.1em) translateY(-0.1em);
 }
 .header-links__list {
@@ -39,7 +41,7 @@
 .header-links__list-item {
   display: inline;
   padding: 0 0.8em;
-  border-left: 0.2em solid var(--color4);
+  border-left: 0.2em solid $color4;
   text-transform: uppercase;
 }
 
@@ -65,17 +67,17 @@
 .main .main__description {
   width: 30%;
   margin: auto;
-  min-width: var(--min-width);
+  min-width: $min-width;
 }
 .main__section {
   padding-bottom: 1em;
 }
 .main__hot-drinks,
 .main__pastries {
-  background-color: var(--color5);
+  background-color: $color5;
 }
 .main__cold-drinks {
-  background-color: var(--color2);
+  background-color: $color2;
 }
 .main__section:last-child {
   padding-bottom: 3em;
@@ -84,7 +86,7 @@
 .footer,
 .footer__icon,
 .footer__text {
-  background-color: var(--color5);
+  background-color: $color5;
   text-align: center;
 }
 .footer__line {
@@ -105,7 +107,7 @@
     width: 12rem;
   }
   .title-box__title {
-    font-size: var(--p3);
+    font-size: $p3;
   }
   .main__description {
     width: 60%;

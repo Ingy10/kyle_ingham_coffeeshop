@@ -1,31 +1,5 @@
-/* Consistent colors, text sizes and max/min widths for each page */
-:root {
-  --color1: #393939;
-  --color2: #f7f7f7;
-  --color3: #fff;
-  --color4: #5bacc3;
-  --color5: #fff0ed;
-  --color6: #909090;
-  --h1-h2: 3.7rem;
-  --h3: 2.2rem;
-  --h3card: 2rem;
-  --p1: 1rem;
-  --p2: 1.3rem;
-  --p3: 2.8rem;
-  --min-width: 320px;
-  --max-width: 1440px;
-}
-// mixins
-@mixin offset-border($offset, $thickness, $color) {
-  // inset: 0;
-  border: $thickness solid $color;
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: -$offset;
-  left: -$offset;
-  bottom: $offset;
-  right: $offset;
-}
+@use "./variables" as *;
+
 /* Enitre document styles */
 * {
   margin: 0;
@@ -36,13 +10,13 @@ body {
   font-weight: 400;
   margin: auto;
   width: 100%;
-  max-width: var(--max-width);
-  min-width: var(--min-width);
+  max-width: $max-width;
+  min-width: $min-width;
 }
 
 /* header section styles */
 .nav-bar {
-  background-color: var(--color5);
+  background-color: $color5;
   padding-top: 1rem;
   padding-left: 1em;
   display: flex;
@@ -57,7 +31,7 @@ body {
   display: flex;
   align-items: center;
   padding-left: 1em;
-  min-width: var(--min-width);
+  min-width: $min-width;
 }
 .list__item {
   padding: 1.3em 1em;
@@ -67,19 +41,18 @@ body {
 .item__link {
   padding: 1em 1em;
   text-align: center;
-  font-size: var(--p2);
-  color: var(--color1);
-  /* border: 1px solid red; */
+  font-size: $p2;
+  color: $color1;
 }
 .item__link1:hover,
 .item__link2:hover {
-  color: var(--color4);
+  color: $color4;
 }
 .item__link3 {
-  color: var(--color4);
+  color: $color4;
 }
 .item__link3:hover {
-  color: var(--color1);
+  color: $color1;
 }
 
 /* Icon styles */
@@ -90,23 +63,23 @@ body {
 /* Font styles for entire document */
 .first-title {
   font-weight: 300;
-  color: var(--color1);
-  font-size: var(--h1-h2);
+  color: $color1;
+  font-size: $h1-h2;
 }
 .second-title {
   font-weight: 300;
-  color: var(--color1);
-  font-size: var(--h3);
+  color: $color1;
+  font-size: $h3;
 }
 .main__price {
-  color: var(--color4);
+  color: $color4;
 }
 .link {
   text-decoration: none;
 }
 .header__text,
 .footer__text {
-  font-size: var(--p1);
+  font-size: $p1;
 }
 
 /* list styles */
