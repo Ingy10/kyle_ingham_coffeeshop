@@ -11,12 +11,14 @@
   height: 36rem;
   display: flex;
 }
-.header-links__list,
-.header-links__list-item {
-  width: 100%;
-  background-color: $color1;
-  color: $color3;
-  text-align: center;
+.header-links {
+  &__list,
+  &__list-item {
+    width: 100%;
+    background-color: $color1;
+    color: $color3;
+    text-align: center;
+  }
 }
 .header-menu__title-box {
   height: 12rem;
@@ -28,46 +30,54 @@
   align-items: center;
   justify-content: center;
 }
-.title-box__border {
-  @include offset-border(0.3em, 5px, $color4);
+.title-box {
+  &__border {
+    @include offset-border(0.3em, 5px, $color4);
+  }
+  &__title {
+    color: $color3;
+    transform: translateX(-0.1em) translateY(-0.1em);
+  }
 }
-.title-box__title {
-  color: $color3;
-  transform: translateX(-0.1em) translateY(-0.1em);
-}
-.header-links__list {
-  padding: 1em;
-}
-.header-links__list-item {
-  display: inline;
-  padding: 0 0.8em;
-  border-left: 0.2em solid $color4;
-  text-transform: uppercase;
+.header-links {
+  &__list {
+    padding: 1em;
+  }
+  &__list-item {
+    display: inline;
+    padding: 0 0.8em;
+    border-left: 0.2em solid $color4;
+    text-transform: uppercase;
+  }
 }
 
 /* Main Section Styles */
-.main__section .first-title,
-.main__section .second-title,
-.main__section p {
-  text-align: center;
-  width: 80%;
-  margin: auto;
-}
-.main__section .first-title {
-  padding-top: 0.2em;
-  padding-bottom: 0.3em;
-}
-.main__section .second-title {
-  padding-bottom: 0.2em;
+.main__section {
+  .first-title,
+  .second-title,
+  p {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
+  .first-title {
+    padding-top: 0.2em;
+    padding-bottom: 0.3em;
+  }
+  .second-title {
+    padding-bottom: 0.2em;
+  }
 }
 .main__price {
   padding-top: 0.2em;
   padding-bottom: 1em;
 }
-.main .main__description {
-  width: 30%;
-  margin: auto;
-  min-width: $min-width;
+.main {
+  .main__description {
+    width: 30%;
+    margin: auto;
+    min-width: $min-width;
+  }
 }
 .main__section {
   padding-bottom: 1em;
@@ -111,5 +121,15 @@
   }
   .main__description {
     width: 60%;
+  }
+  .main {
+    .first-title {
+      line-height: 1;
+      padding-top: 0.4em;
+    }
+    .second-title {
+      line-height: 1;
+      padding-bottom: 0.3em;
+    }
   }
 }
