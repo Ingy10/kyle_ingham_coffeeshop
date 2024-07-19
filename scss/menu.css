@@ -1,3 +1,61 @@
+@keyframes slide-in-side {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideInTop {
+  0% {
+    transform: translateX(-1000px) translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes lettersAppear {
+  0% {
+    opacity: 0;
+    transform: scale(400%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+    transform: translateX(-0.1em) translateY(-0.1em);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes colorChange {
+  0%, 100% {
+    background-color: #393939;
+  }
+  50% {
+    background-color: #5bacc3;
+  }
+}
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}
 /* Enitre document styles */
 * {
   margin: 0;
@@ -10,7 +68,7 @@ body {
   margin: auto;
   width: 100%;
   max-width: 1440px;
-  min-width: 300px;
+  min-width: 320px;
 }
 
 /* header section styles */
@@ -27,6 +85,13 @@ body {
   display: flex;
   align-items: center;
   padding-bottom: 1em;
+}
+
+.nav-bar__second-title {
+  font-size: 2.8em;
+}
+.nav-bar__second-title:hover {
+  animation: jump 0.5s linear infinite;
 }
 
 .nav-bar__list {
@@ -123,37 +188,6 @@ li {
     margin: 0;
   }
 }
-@keyframes slide-in-side {
-  0% {
-    transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-@keyframes slideInTop {
-  0% {
-    transform: translateX(-1000px) translateY(-500px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0px) translateY(0px);
-    opacity: 1;
-  }
-}
-@keyframes lettersAppear {
-  0% {
-    opacity: 0;
-    transform: scale(400%);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(100%);
-    transform: translateX(-0.1em) translateY(-0.1em);
-  }
-}
 /* Header Styles */
 .header-menu {
   background-image: url(../Assets/coffee-circle.jpg);
@@ -195,6 +229,7 @@ li {
 }
 .title-box__title {
   color: #fff;
+  font-weight: 300;
   opacity: 0;
   transform: translateX(-0.1em) translateY(-0.1em);
   animation: lettersAppear 1.5s ease-in-out 1s;
@@ -235,7 +270,7 @@ li {
 .main .main__description {
   width: 30%;
   margin: auto;
-  min-width: 300px;
+  min-width: 320px;
 }
 
 .main__section {

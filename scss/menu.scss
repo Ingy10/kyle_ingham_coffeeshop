@@ -39,6 +39,7 @@
   }
   &__title {
     color: $color3;
+    font-weight: 300;
     opacity: 0;
     transform: translateX(-0.1em) translateY(-0.1em);
     animation: lettersAppear 1.5s ease-in-out 1s;

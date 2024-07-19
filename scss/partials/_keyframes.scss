@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @keyframes slide-in-side {
   0% {
     transform: translateX(1000px);
@@ -27,5 +29,34 @@
     opacity: 1;
     transform: scale(100%);
     transform: translateX(-0.1em) translateY(-0.1em);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes colorChange {
+  0%,
+  100% {
+    background-color: $color1;
+  }
+  50% {
+    background-color: $color4;
+  }
+}
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  80% {
+    transform: translateY(0);
   }
 }

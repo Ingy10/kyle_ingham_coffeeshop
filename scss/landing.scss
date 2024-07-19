@@ -1,6 +1,7 @@
 @use "./partials/global";
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
+@use "./partials/keyframes" as *;
 
 /* header styles */
 .header {
@@ -63,6 +64,15 @@
 .container-top__img {
   height: 15rem;
   margin-bottom: 1em;
+}
+.section2__img {
+  z-index: 1;
+
+  &:hover {
+    animation: spin 2s linear infinite;
+    // transition: 4s;
+    cursor: pointer;
+  }
 }
 .container-bottom__description {
   text-align: left;
@@ -143,6 +153,7 @@
   margin: auto;
   min-width: $min-width;
   width: 100%;
+  animation: colorChange 2.5s linear infinite;
 }
 /* footer styles */
 .footer {
@@ -191,9 +202,18 @@ button {
     background-color: $color3;
     color: $color4;
   }
+  &:active {
+    padding: 0.8em 1em;
+    color: $color2;
+    background-color: $color4;
+  }
 }
 .button__border {
   @include offset-border(0.2em, 2px, $color1);
+
+  &:active {
+    @include offset-border(0, 2px, $color1);
+  }
 }
 
 .description__button,

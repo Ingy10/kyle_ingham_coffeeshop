@@ -29,16 +29,15 @@ body {
   display: flex;
   align-items: center;
   padding-bottom: 1em;
-}
 
-.nav-bar__second-title {
-  font-size: 2.8em;
+  .second-title {
+    font-size: 2.8em;
 
-  &:hover {
-    animation: jump 0.5s linear infinite;
+    &:hover {
+      animation: jump 1s linear;
+    }
   }
 }
-
 .nav-bar__list {
   display: flex;
   align-items: center;

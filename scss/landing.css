@@ -1,3 +1,61 @@
+@keyframes slide-in-side {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideInTop {
+  0% {
+    transform: translateX(-1000px) translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes lettersAppear {
+  0% {
+    opacity: 0;
+    transform: scale(400%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+    transform: translateX(-0.1em) translateY(-0.1em);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes colorChange {
+  0%, 100% {
+    background-color: #393939;
+  }
+  50% {
+    background-color: #5bacc3;
+  }
+}
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}
 /* Enitre document styles */
 * {
   margin: 0;
@@ -10,7 +68,7 @@ body {
   margin: auto;
   width: 100%;
   max-width: 1440px;
-  min-width: 300px;
+  min-width: 320px;
 }
 
 /* header section styles */
@@ -27,6 +85,13 @@ body {
   display: flex;
   align-items: center;
   padding-bottom: 1em;
+}
+
+.nav-bar__second-title {
+  font-size: 2.8em;
+}
+.nav-bar__second-title:hover {
+  animation: jump 0.5s linear infinite;
 }
 
 .nav-bar__list {
@@ -192,6 +257,14 @@ li {
   margin-bottom: 1em;
 }
 
+.section2__img {
+  z-index: 1;
+}
+.section2__img:hover {
+  animation: spin 2s linear infinite;
+  cursor: pointer;
+}
+
 .container-bottom__description {
   text-align: left;
 }
@@ -285,8 +358,9 @@ li {
   padding: 0.8em 1.2em;
   text-align: center;
   margin: auto;
-  min-width: 300px;
+  min-width: 320px;
   width: 100%;
+  animation: colorChange 2.5s linear infinite;
 }
 
 /* footer styles */
@@ -335,6 +409,11 @@ button:hover {
   background-color: #fff;
   color: #5bacc3;
 }
+button:active {
+  padding: 0.8em 1em;
+  color: #f7f7f7;
+  background-color: #5bacc3;
+}
 
 .button__border {
   border: 2px solid #393939;
@@ -344,6 +423,15 @@ button:hover {
   left: -0.2em;
   bottom: 0.2em;
   right: 0.2em;
+}
+.button__border:active {
+  border: 2px solid #393939;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .description__button,
