@@ -38,7 +38,6 @@ body {
 .list__item {
   padding: 1.3em 1em;
   position: relative;
-  /* border: 1px solid red; */
 }
 
 .item__link {
@@ -352,6 +351,9 @@ button:hover {
   margin-top: 2em;
 }
 
+.social__icon {
+  transition: 1s;
+}
 .social__icon:hover {
   box-shadow: 1px 1px 6px #5bacc3, 2px 2px 7px #5bacc3, -2px -2px 8px #5bacc3, inset 1px 1px 5px #5bacc3, inset -1px -1px 6px #5bacc3;
 }

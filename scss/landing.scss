@@ -200,9 +200,12 @@ button {
 .our-products__button {
   margin-top: 2em;
 }
-.social__icon:hover {
-  box-shadow: 1px 1px 6px $color4, 2px 2px 7px $color4, -2px -2px 8px $color4,
-    inset 1px 1px 5px $color4, inset -1px -1px 6px $color4;
+.social__icon {
+  transition: 1s;
+  &:hover {
+    box-shadow: 1px 1px 6px $color4, 2px 2px 7px $color4, -2px -2px 8px $color4,
+      inset 1px 1px 5px $color4, inset -1px -1px 6px $color4;
+  }
 }
 /* responsive styles for smaller screen sizes */
 @media (max-width: 960px) {

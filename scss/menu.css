@@ -38,7 +38,6 @@ body {
 .list__item {
   padding: 1.3em 1em;
   position: relative;
-  /* border: 1px solid red; */
 }
 
 .item__link {
@@ -124,6 +123,37 @@ li {
     margin: 0;
   }
 }
+@keyframes slide-in-side {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideInTop {
+  0% {
+    transform: translateX(-1000px) translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes lettersAppear {
+  0% {
+    opacity: 0;
+    transform: scale(400%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+    transform: translateX(-0.1em) translateY(-0.1em);
+  }
+}
 /* Header Styles */
 .header-menu {
   background-image: url(../Assets/coffee-circle.jpg);
@@ -150,6 +180,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: slide-in-side 1.5s;
 }
 
 .title-box__border {
@@ -160,10 +191,14 @@ li {
   left: -0.3em;
   bottom: 0.3em;
   right: 0.3em;
+  animation: slideInTop 1.5s;
 }
 .title-box__title {
   color: #fff;
+  opacity: 0;
   transform: translateX(-0.1em) translateY(-0.1em);
+  animation: lettersAppear 1.5s ease-in-out 1s;
+  animation-fill-mode: forwards;
 }
 
 .header-links__list {

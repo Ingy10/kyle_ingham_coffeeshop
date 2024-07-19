@@ -1,6 +1,7 @@
 @use "./partials/global";
 @use "./partials/mixins" as *;
 @use "./partials/variables" as *;
+@use "./partials/keyframes" as *;
 
 /* Header Styles */
 .header-menu {
@@ -29,14 +30,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: slide-in-side 1.5s;
 }
 .title-box {
   &__border {
     @include offset-border(0.3em, 5px, $color4);
+    animation: slideInTop 1.5s;
   }
   &__title {
     color: $color3;
+    opacity: 0;
     transform: translateX(-0.1em) translateY(-0.1em);
+    animation: lettersAppear 1.5s ease-in-out 1s;
+    animation-fill-mode: forwards;
   }
 }
 .header-links {
