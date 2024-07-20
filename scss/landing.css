@@ -223,10 +223,24 @@ li {
   align-items: center;
   justify-content: space-between;
   gap: 2em;
-  padding: 2em 12em 2em 8em;
+  padding: 2em;
+  width: 100%;
   overflow: hidden;
 }
+@media (min-width: 768px) {
+  .header__section {
+    padding: 2em 6em 2em 5em;
+  }
+}
+@media (min-width: 1024px) {
+  .header__section {
+    padding: 2em 12em 2em 8em;
+  }
+}
 
+.description__title {
+  line-height: 1;
+}
 .description__text {
   margin-top: 0.7em;
   margin-bottom: -0.3em;
@@ -237,7 +251,12 @@ li {
 }
 
 .section__img {
-  height: 32rem;
+  height: 25em;
+}
+@media (min-width: 768px) {
+  .section__img {
+    height: 32rem;
+  }
 }
 
 /* main section styles */
@@ -257,11 +276,21 @@ li {
   margin: 1em 3em;
   box-shadow: 0 5px 9px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  width: 20em;
+  width: 15em;
+}
+@media (min-width: 768px) {
+  .our-products__product-cards .product-card {
+    width: 20em;
+  }
 }
 
 .product-card__container-top {
-  padding: 1em 2em 1em;
+  padding: 1em;
+}
+@media (min-width: 768px) {
+  .product-card__container-top {
+    padding: 1em 2em;
+  }
 }
 .product-card__container-bottom {
   padding: 1em 1em;
@@ -304,33 +333,83 @@ li {
 }
 
 .main__discount-section {
-  height: 64rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .main__discount-section {
+    min-height: 64rem;
+  }
+}
 
 .discount-section__top-section {
-  height: 32rem;
-  padding-top: 7em;
-  width: 80%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  height: auto;
+  padding-top: 2em;
+}
+@media (min-width: 1024px) {
+  .discount-section__top-section {
+    height: 32rem;
+    width: 80%;
+    padding-top: 7em;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .top-section__section1 {
-  width: 37%;
+  margin-bottom: 5em;
+  width: 60%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .top-section__section1 {
+    width: 37%;
+  }
 }
 
 .section1__title {
-  margin-bottom: 0.4em;
+  text-align: center;
+  margin-bottom: 0.3em;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  .section1__title {
+    margin-bottom: 0.4em;
+  }
+}
+.section1__description {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .section1__description {
+    text-align: left;
+  }
 }
 .section1__images {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding-top: 1.5em;
   padding-bottom: 1.8em;
+}
+@media (min-width: 1024px) {
+  .section1__button {
+    position: absolute;
+    left: 0;
+  }
 }
 
 .images__icon {
@@ -338,14 +417,22 @@ li {
 }
 
 .top-section__section2 {
-  width: 24em;
+  width: 80%;
+  height: auto;
+  position: relative;
+  margin-bottom: 1em;
   padding: 4em 1.2em;
   background-image: url(../Assets/coldbrewbackground.png);
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+}
+@media (min-width: 768px) {
+  .top-section__section2 {
+    width: 24em;
+    height: 24em;
+  }
 }
 
 .section2__img {
@@ -353,6 +440,7 @@ li {
   left: -0.9em;
   bottom: 0.9em;
   right: 0.9em;
+  transform: translateX(-5px);
 }
 .section2__border {
   border: 5px solid #5bacc3;
@@ -365,9 +453,10 @@ li {
 }
 
 .discount-section__bottom-section {
-  height: 32rem;
+  min-height: 32rem;
   width: 80%;
   display: flex;
+  margin-top: -0.5em;
 }
 
 .bottom-section__description {
@@ -375,12 +464,18 @@ li {
   color: #fff;
   font-size: 2.8rem;
   font-weight: 200;
-  padding: 0.8em 1.2em;
+  padding: 0.8em;
   text-align: center;
   margin: auto;
-  min-width: 340px;
   width: 100%;
   animation: colorChange 2.5s linear infinite;
+  align-items: left;
+  align-content: left;
+}
+@media (min-width: 768px) {
+  .bottom-section__description {
+    padding: 0.8em 1.2em;
+  }
 }
 
 /* footer styles */
@@ -391,6 +486,9 @@ li {
   justify-content: space-around;
   position: relative;
   overflow: hidden;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  flex-flow: wrap;
 }
 .footer__background-img1, .footer__background-img2 {
   position: absolute;
@@ -407,8 +505,15 @@ li {
 }
 .footer__section {
   display: inline-block;
-  margin: 4em 2em;
-  text-align: left;
+  margin: 1em;
+  padding: 0;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer__section {
+    margin: 4em 2em;
+    text-align: left;
+  }
 }
 .footer .second-title {
   margin-bottom: 0.5em;
@@ -461,80 +566,8 @@ button:active {
 
 .social__icon {
   transition: 1s;
+  width: 3em;
 }
 .social__icon:hover {
   box-shadow: 1px 1px 6px #5bacc3, 2px 2px 7px #5bacc3, -2px -2px 8px #5bacc3, inset 1px 1px 5px #5bacc3, inset -1px -1px 6px #5bacc3;
-}
-
-/* responsive styles for smaller screen sizes */
-@media (max-width: 960px) {
-  .header__section {
-    padding: 2em;
-  }
-  .section__img {
-    height: 25em;
-  }
-  .main__discount-section {
-    height: auto;
-  }
-  .discount-section__top-section {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    padding-top: 2em;
-  }
-  .top-section__section1 {
-    margin-bottom: 6em;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .top-section__section1 .section1__title {
-    text-align: center;
-    margin-bottom: 0.3em;
-    line-height: 1;
-  }
-  .top-section__section1 .section1__description {
-    text-align: center;
-  }
-  .section1__images {
-    width: 100%;
-  }
-  .footer {
-    display: flex;
-    flex-flow: wrap;
-  }
-  .footer__section,
-  .footer p {
-    margin: 1em;
-    padding: 0;
-    text-align: center;
-  }
-}
-@media (max-width: 480px) {
-  .our-products__product-cards .product-card {
-    width: 17em;
-  }
-  .top-section__section1 {
-    margin-bottom: 4em;
-  }
-  .top-section__section2 {
-    width: 80%;
-    height: auto;
-    position: relative;
-    margin-bottom: 1em;
-  }
-  .top-section__section2 .section2__img {
-    width: 70%;
-    height: auto;
-    transform: translateX(-5px);
-  }
-  .footer {
-    padding-top: 2em;
-    padding-bottom: 2em;
-  }
-  .footer__section {
-    margin: 0;
-  }
 }/*# sourceMappingURL=landing.css.map */
