@@ -1,6 +1,7 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 @use "./keyframes" as *;
+@use "./fonts" as *;
 
 /* Enitre document styles */
 * {
@@ -20,10 +21,12 @@ body {
 .nav-bar {
   background-color: $color5;
   padding-top: 1rem;
-  padding-left: 1em;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+  @include tablet {
+    padding-left: 1em;
+  }
 }
 .nav-bar__banner-content {
   display: flex;
@@ -31,9 +34,13 @@ body {
   padding-bottom: 1em;
 }
 
-.nav-bar__second-title {
-  font-size: 2.8em;
-
+.banner-content__a {
+  .nav-bar__second-title {
+    font-size: $p2;
+    @include tablet {
+      font-size: $p3;
+    }
+  }
   &:hover {
     animation: jump 0.5s linear infinite;
   }
@@ -42,17 +49,30 @@ body {
 .nav-bar__list {
   display: flex;
   align-items: center;
-  padding-left: 1em;
+  padding-left: 0;
+  overflow: hidden;
+  @include tablet {
+    padding-left: 1em;
+  }
 }
 .list__item {
-  padding: 1.3em 1em;
+  padding: 0;
+  text-wrap: nowrap;
   position: relative;
+  @include tablet {
+    margin: 0;
+    padding: 0;
+  }
 }
 .item__link {
+  font-size: 1em;
+  margin: 0;
   padding: 1em 1em;
   text-align: center;
-  font-size: $p2;
   color: $color1;
+  @include tablet {
+    font-size: $p2;
+  }
 }
 .item__link1:hover,
 .item__link2:hover {
@@ -67,7 +87,10 @@ body {
 
 /* Icon styles */
 .icon {
-  width: 3rem;
+  width: 2em;
+  @include tablet {
+    width: 3rem;
+  }
 }
 
 /* Font styles for entire document */
@@ -95,34 +118,4 @@ body {
 /* list styles */
 li {
   list-style-type: none;
-}
-
-/* responsive styles for smaller screen sizes */
-@media (max-width: 960px) {
-  .nav-bar__list {
-    padding-left: 0;
-    overflow: hidden;
-  }
-  .list__item {
-    padding: 0;
-    text-wrap: nowrap;
-  }
-}
-@media (max-width: 480px) {
-  .nav-bar__banner-content {
-    .icon {
-      width: 2em;
-    }
-    .second-title {
-      font-size: $p2;
-    }
-  }
-  .list_item {
-    margin: 0;
-    padding: 0;
-  }
-  .item__link {
-    font-size: 1em;
-    margin: 0;
-  }
 }

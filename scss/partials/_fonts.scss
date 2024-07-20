@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../Assets/Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+  font-weight: 300 800; // This covers Light (300) to ExtraBold (800)
+  font-stretch: 75% 100%; // This covers Condensed to Normal width
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../Assets/Fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf");
+  font-weight: 300 800;
+  font-stretch: 75% 100%;
+  font-style: italic;
+}
