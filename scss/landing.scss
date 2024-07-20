@@ -55,6 +55,9 @@
   padding: 0.7em 0;
 }
 .our-products__product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   .product-card {
     display: inline-block;
     background-color: $color3;
@@ -63,6 +66,9 @@
     border-radius: 10px;
     width: 15em;
     @include tablet {
+      width: 17em;
+    }
+    @include desktop {
       width: 20em;
     }
   }
@@ -92,7 +98,6 @@
 
   &:hover {
     animation: spin 2s linear infinite;
-    // transition: 4s;
     cursor: pointer;
   }
 }
@@ -185,7 +190,7 @@
   position: relative;
   margin-bottom: 1em;
   padding: 4em 1.2em;
-  background-image: url(../Assets/coldbrewbackground.png);
+  background-image: url(../Assets/Images/coldbrewbackground.png);
   background-size: cover;
   @include flex-center();
   @include tablet {
@@ -199,8 +204,6 @@
     left: -0.9em;
     bottom: 0.9em;
     right: 0.9em;
-    // width: 70%;
-    // height: auto;
     transform: translateX(-5px);
   }
   &__border {
@@ -221,7 +224,6 @@
   padding: 0.8em;
   text-align: center;
   margin: auto;
-  // min-width: $min-width;
   width: 100%;
   animation: colorChange 2.5s linear infinite;
   align-items: left;

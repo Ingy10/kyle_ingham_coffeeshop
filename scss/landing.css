@@ -270,6 +270,11 @@ li {
   padding: 0.7em 0;
 }
 
+.our-products__product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .our-products__product-cards .product-card {
   display: inline-block;
   background-color: #fff;
@@ -279,6 +284,11 @@ li {
   width: 15em;
 }
 @media (min-width: 768px) {
+  .our-products__product-cards .product-card {
+    width: 17em;
+  }
+}
+@media (min-width: 1024px) {
   .our-products__product-cards .product-card {
     width: 20em;
   }
@@ -422,7 +432,7 @@ li {
   position: relative;
   margin-bottom: 1em;
   padding: 4em 1.2em;
-  background-image: url(../Assets/coldbrewbackground.png);
+  background-image: url(../Assets/Images/coldbrewbackground.png);
   background-size: cover;
   display: flex;
   justify-content: center;
