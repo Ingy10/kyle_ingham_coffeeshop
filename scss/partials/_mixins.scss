@@ -1,7 +1,6 @@
 @use "./variables" as *;
 
 @mixin offset-border($offset, $thickness, $color) {
-  // inset: 0;
   border: $thickness solid $color;
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
