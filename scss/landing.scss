@@ -150,6 +150,7 @@
   @include flex-column-center();
   @include desktop {
     width: 37%;
+    align-items: flex-start;
   }
 }
 .section1 {
@@ -159,6 +160,10 @@
     line-height: 1;
     @include tablet {
       margin-bottom: 0.4em;
+    }
+    @include desktop {
+      text-align: left;
+      margin-bottom: 0.6em;
     }
   }
   &__description {
@@ -186,7 +191,9 @@
 }
 .top-section__section2 {
   width: 80%;
+  max-width: 24em;
   height: auto;
+  max-height: 24em;
   position: relative;
   margin-bottom: 1em;
   padding: 4em 1.2em;
@@ -200,11 +207,8 @@
 }
 .section2 {
   &__img {
-    top: -0.9em;
-    left: -0.9em;
-    bottom: 0.9em;
-    right: 0.9em;
-    transform: translateX(-5px);
+    transform: translateX(-9px) translateY(-9px);
+    width: 45%;
   }
   &__border {
     @include offset-border(0.9em, 5px, $color4);
@@ -221,7 +225,7 @@
   color: $color3;
   font-size: $p3;
   font-weight: 200;
-  padding: 0.8em;
+  padding: 0.6em;
   text-align: center;
   margin: auto;
   width: 100%;
@@ -240,8 +244,8 @@
   justify-content: space-around;
   position: relative;
   overflow: hidden;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
   flex-flow: wrap;
 
   &__background-img1,
@@ -264,8 +268,11 @@
     padding: 0;
     text-align: center;
     @include tablet {
-      margin: 4em 2em;
+      margin: 2em;
       text-align: left;
+    }
+    @include desktop {
+      margin: 4em 2em;
     }
   }
   .second-title {

@@ -387,6 +387,7 @@ li {
 @media (min-width: 1024px) {
   .top-section__section1 {
     width: 37%;
+    align-items: flex-start;
   }
 }
 
@@ -398,6 +399,12 @@ li {
 @media (min-width: 768px) {
   .section1__title {
     margin-bottom: 0.4em;
+  }
+}
+@media (min-width: 1024px) {
+  .section1__title {
+    text-align: left;
+    margin-bottom: 0.6em;
   }
 }
 .section1__description {
@@ -428,7 +435,9 @@ li {
 
 .top-section__section2 {
   width: 80%;
+  max-width: 24em;
   height: auto;
+  max-height: 24em;
   position: relative;
   margin-bottom: 1em;
   padding: 4em 1.2em;
@@ -446,11 +455,8 @@ li {
 }
 
 .section2__img {
-  top: -0.9em;
-  left: -0.9em;
-  bottom: 0.9em;
-  right: 0.9em;
-  transform: translateX(-5px);
+  transform: translateX(-9px) translateY(-9px);
+  width: 45%;
 }
 .section2__border {
   border: 5px solid #5bacc3;
@@ -474,7 +480,7 @@ li {
   color: #fff;
   font-size: 2.8rem;
   font-weight: 200;
-  padding: 0.8em;
+  padding: 0.6em;
   text-align: center;
   margin: auto;
   width: 100%;
@@ -496,8 +502,8 @@ li {
   justify-content: space-around;
   position: relative;
   overflow: hidden;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
   flex-flow: wrap;
 }
 .footer__background-img1, .footer__background-img2 {
@@ -521,8 +527,13 @@ li {
 }
 @media (min-width: 768px) {
   .footer__section {
-    margin: 4em 2em;
+    margin: 2em;
     text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  .footer__section {
+    margin: 4em 2em;
   }
 }
 .footer .second-title {
