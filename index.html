@@ -3,22 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
-    /> -->
     <link rel="stylesheet" href="./scss/partials/_global.scss" />
     <link rel="stylesheet" href="./scss/landing.css" />
     <title>Coffee Shop - Home</title>
   </head>
   <body>
     <header class="header" role="banner">
-      <nav class="nav-bar" aria-label="Main navigation">
+      <nav
+        class="nav-bar"
+        aria-label="Main navigation"
+        role="navigation"
+        tabindex="0"
+      >
         <div class="nav-bar__banner-content">
           <img
             class="banner-content__icon icon"
             src="./Assets/Logos/coffee-beans-logo-and-footer.svg"
-            alt="coffee bean logo"
+            alt="Logo of Nitro Coffee Shop"
           />
           <a class="link banner-content__a" href="#"
             ><h3 class="second-title nav-bar__second-title">nitro</h3></a
@@ -31,12 +32,18 @@
             >
           </li>
           <li class="list__item">
-            <a class="link item__link2 item__link" href="./pages/menu.html"
+            <a
+              class="link item__link2 item__link"
+              href="./pages/menu.html"
+              aria-label="View our menu and shop"
               >MENU</a
             >
           </li>
           <li class="list__item">
-            <a class="link item__link3 item__link" href="./pages/menu.html"
+            <a
+              class="link item__link3 item__link"
+              href="./pages/menu.html"
+              aria-label="View our menu and shop"
               >SHOP NOW</a
             >
           </li>
@@ -49,7 +56,7 @@
             Coffee is a brewed drink prepared from roasted coffee beans, the
             seeds of berries from certain Coffea species
           </p>
-          <a href="./pages/menu.html"
+          <a href="./pages/menu.html" aria-label="View our menu and shop"
             ><button class="description__button">
               SHOP NOW
               <div class="button__border"></div></button
@@ -66,11 +73,9 @@
       <section
         id="our-products"
         class="main__our-products"
-        aria-labelledby="our-products-heading"
+        aria-labelledby="our-products"
       >
-        <h2 class="first-title our-products__title" id="our-products-heading">
-          Our Products
-        </h2>
+        <h2 class="first-title our-products__title">Our Products</h2>
         <div class="our-products__product-cards">
           <div class="product-cards__coffee-beans product-card">
             <div class="product-card__container-top">
@@ -121,14 +126,18 @@
             </div>
           </div>
         </div>
-        <a href="./pages/menu.html"
+        <a href="./pages/menu.html" aria-label="View our menu and shop"
           ><button class="our-products__button" aria-label="View all products">
             VIEW ALL
             <div class="button__border"></div></button
         ></a>
       </section>
-      <section id="discount-section" class="main__discount-section">
-        <div class="discount-section__top-section">
+      <section
+        id="discount-section"
+        class="main__discount-section"
+        aria-labelledby="discount-section"
+      >
+        <div class="discount-section__top-section" id="discount-section">
           <div class="top-section__section1">
             <h2 class="first-title section1__title">We're Different</h2>
             <p class="section1__description">
@@ -136,9 +145,21 @@
               of the way, we strive for excellence.
             </p>
             <div class="section1__images">
-              <img class="images__icon" src="./Assets/Logos/planting.svg" />
-              <img class="images__icon" src="./Assets/Logos/coffee-beans.svg" />
-              <img class="images__icon" src="./Assets/Logos/coffee-cup.svg" />
+              <img
+                class="images__icon"
+                src="./Assets/Logos/planting.svg"
+                alt=""
+              />
+              <img
+                class="images__icon"
+                src="./Assets/Logos/coffee-beans.svg"
+                alt=""
+              />
+              <img
+                class="images__icon"
+                src="./Assets/Logos/coffee-cup.svg"
+                alt=""
+              />
             </div>
             <a href="#"
               ><button class="section1__button button">
@@ -148,7 +169,11 @@
           </div>
           <div class="top-section__section2">
             <div class="section2__border"></div>
-            <img class="section2__img" src="./Assets/Images/tiltedcan.png" />
+            <img
+              class="section2__img"
+              src="./Assets/Images/tiltedcan.png"
+              alt="cold brew coffee can"
+            />
           </div>
         </div>
         <div class="discount-section__bottom-section">
@@ -162,10 +187,12 @@
       <img
         class="footer__background-img1"
         src="./Assets/Logos/coffee-beans-logo-and-footer.svg"
+        alt=""
       />
       <img
         class="footer__background-img2"
         src="./Assets/Logos/coffee-beans-logo-and-footer.svg"
+        alt=""
       />
       <div class="footer__address footer__section">
         <h3 class="second-title">Address</h3>
@@ -189,7 +216,7 @@
           ><img
             class="social__icon icon"
             src="./Assets/Logos/Facebook-Icon.svg"
-            alt="facebook"
+            alt="facebook link"
         /></a>
         <a
           class="social__link"
@@ -199,7 +226,7 @@
           ><img
             class="social__icon icon"
             src="./Assets/Logos/Yelp-Icon.svg"
-            alt="yelp"
+            alt="yelp link"
         /></a>
         <a
           class="social__link"
@@ -209,7 +236,7 @@
           ><img
             class="social__icon icon"
             src="./Assets/Logos/Instagram-Icon.svg"
-            alt="instagram"
+            alt="instagram link"
         /></a>
       </div>
     </footer>

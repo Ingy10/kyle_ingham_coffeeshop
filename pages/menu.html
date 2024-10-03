@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
-    /> -->
     <link rel="stylesheet" href="../scss/partials/_global.scss" />
     <link rel="stylesheet" href="../scss/menu.css" />
     <title>Coffee Shop - Menu</title>
   </head>
   <body>
     <header class="header" role="banner">
-      <nav class="nav-bar" aria-label="Main navigation">
+      <nav
+        class="nav-bar"
+        aria-label="Main navigation"
+        tabindex="0"
+        role="navigation"
+      >
         <div class="nav-bar__banner-content">
           <img
             class="banner-content__icon icon"
@@ -26,7 +27,10 @@
         </div>
         <ul class="nav-bar__list">
           <li class="list__item">
-            <a class="link item__link1 item__link" href="../index.html"
+            <a
+              class="link item__link1 item__link"
+              href="../index.html"
+              aria-label="Return to about page"
               >ABOUT</a
             >
           </li>
@@ -45,7 +49,7 @@
         </div>
       </div>
       <div class="header-links">
-        <ul class="header-links__list">
+        <ul class="header-links__list" aria-label="Quick menu navigation">
           <a class="link header-links__link" href="#hot-drinks"
             ><li class="header-links__list-item">Hot Drinks</li></a
           >
@@ -67,7 +71,7 @@
         <h2 class="first-title hot-drinks__title" id="hot-drinks-heading">
           Hot Drinks
         </h2>
-        <h3 class="second-title" class="hot-drinks__subtitle">In-house brew</h3>
+        <h3 class="second-title hot-drinks__subtitle">In-house brew</h3>
         <p class="hot-drinks__description main__description">
           <i
             >Our in-house medium roast is a classic balance between sweet
@@ -76,7 +80,7 @@
           >
         </p>
         <p class="hot-drinks__price main__price">$2.99</p>
-        <h3 class="second-title" class="hot-drinks__subtitle">Espresso</h3>
+        <h3 class="second-title hot-drinks__subtitle">Espresso</h3>
         <p class="hot-drinks__description main__description">
           <i
             >A balance between bold and smooth, powerful and sweet, our
@@ -95,7 +99,7 @@
         <h2 class="first-title cold-drinks__title" id="cold-drinks-heading">
           Cold Drinks
         </h2>
-        <h3 class="second-title" class="cold-drinks__subtitle">Cold Brew</h3>
+        <h3 class="second-title cold-drinks__subtitle">Cold Brew</h3>
         <p class="cold-drinks__description main__description">
           <i
             >Our bright and delicious coffee blend, brewed over ice to give you
@@ -104,9 +108,7 @@
           >
         </p>
         <p class="cold-drinks__price main__price">$3.99</p>
-        <h3 class="second-title" class="cold-drinks__subtitle">
-          Iced Chai Latte
-        </h3>
+        <h3 class="second-title cold-drinks__subtitle">Iced Chai Latte</h3>
         <p class="cold-drinks__description main__description">
           <i
             >A creamy drink with a kick, this drink features spicy chai tea
@@ -123,7 +125,7 @@
         <h2 class="first-title pastries__title" id="pastries-heading">
           Pastries
         </h2>
-        <h3 class="second-title" class="pastries__subtitle">
+        <h3 class="second-title pastries__subtitle">
           Bacon Oatmeal Raisin Cookie
         </h3>
         <p class="pastries__description main__description">
@@ -147,11 +149,15 @@
     <footer class="footer" role="contentinfo">
       <hr class="footer__line" />
       <p class="footer__text">Thank you!</p>
-      <img
-        class="footer__icon icon"
-        src="../Assets/Logos/coffee-beans-logo-and-footer.svg"
-        alt="coffee bean logo"
-      />
+      <a
+        class="footer__link"
+        href="../index.html"
+        aria-label="Return to home page"
+        ><img
+          class="footer__icon icon"
+          src="../Assets/Logos/coffee-beans-logo-and-footer.svg"
+          alt="coffee bean logo"
+      /></a>
     </footer>
   </body>
 </html>

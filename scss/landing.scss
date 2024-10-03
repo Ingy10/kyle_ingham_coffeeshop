@@ -5,6 +5,9 @@
 @use "./partials/fonts" as *;
 
 /* header styles */
+html {
+  background-color: $color5;
+}
 .header {
   margin: 0;
 }
